@@ -1,61 +1,101 @@
-/* ---------------------------------------------------------
-   HTML5 Bones
-   This stylesheet contains print styling and a section for 
-   you to simply add your own. This is a basic template 
-   after all.
-   ---------------------------------------------------------*/
-    body {
-   
-    }
-    /* Default link styling */
-    a:link { color:#0271fb; }
-    a:visited { color:#bd02fb; }
-    a:hover, a:focus { color:#000; }
-    a:active { color:#fb0e02; }
-    
-    
-    
+a:link {
+  color: #0271fb;
+}
+a:visited {
+  color: #bd02fb;
+}
+a:hover,
+a:focus {
+  color: #000;
+}
+a:active {
+  color: #fb0e02;
+}
+
 /* ---------------------------------------------------------
    Author's styles
    ---------------------------------------------------------*/
-    body {
-   
-    }
+body {
+  background-color: lightgrey;
+}
 
+.header {
+  display: flex;
+  flex-grow: 1;
+  margin: 0 auto;
+  position: relative;
+  height: 35px;
+  width: 100%;
+}
 
-    
+.nav {
+  align-items: stretch;
+  display: flex;
+  min-height: 3.25rem;
+  width: 100%;
+}
+
+.menu-menu-glowne-container {
+  display: flex;
+  width: 100%;
+}
+.menu {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin: auto;
+}
+.menu-item {
+  display: flex;
+  padding: 0.5rem 0.75rem;
+}
+
+.container-gallery-temp {
+  width: 500px;
+  height: 500px;
+  background-color: beige;
+  display: flex;
+  margin: 2% auto;
+}
+
 /* ---------------------------------------------------------
    Print styles
    ---------------------------------------------------------*/
 @media print {
-    * {
-        color:#000 !important;
-        box-shadow:none !important;
-        text-shadow:none !important;
-        background:transparent !important;
-    }
-    html { background-color:#fff; }
-    /* Hide navigation */
-    nav { display:none; }
+  * {
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    background: transparent !important;
+  }
 
-    /* Show link destinations in brackets after the link text */
-    a[href]:after { content: " (" attr(href) ") "; }
-    a[href] {
-        font-weight:bold;
-        text-decoration:underline;
-        color:#06c;
-        border:none;
-    }
-    /* Don't show link destinations for JavaScript or internal links */ 
-    a[href^="javascript:"]:after, a[href^="#"]:after { content:""; }
-    
-    /* Show abbr title value in brackets after the text */
-    abbr[title]:after { content: " (" attr(title) ")"; }
+  /* Show link destinations in brackets after the link text */
+  a[href]:after {
+    content: " (" attr(href) ") ";
+  }
+  a[href] {
+    font-weight: bold;
+    text-decoration: underline;
+    color: #06c;
+    border: none;
+  }
+  /* Don't show link destinations for JavaScript or internal links */
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
 
-    figure { 
-        margin-bottom:1em; 
-        overflow:hidden;
-    }
+  /* Show abbr title value in brackets after the text */
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
 
-    figure img { border:1px solid #000; }
+  figure {
+    margin-bottom: 1em;
+    overflow: hidden;
+  }
+
+  figure img {
+    border: 1px solid #000;
+  }
 }

@@ -11,10 +11,9 @@
 
 <footer role="contentinfo">
     <address>
-        <p>.</p>
+
     </address>
     <small>Copyright &copy; <time>2022</time></small>
-
 </footer>
 
 
