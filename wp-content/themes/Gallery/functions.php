@@ -24,6 +24,7 @@ function load_css()
 add_action('wp_enqueue_scripts', 'load_css');
 
 
+
 function register_my_menus()
 {
     register_nav_menus(

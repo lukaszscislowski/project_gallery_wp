@@ -45,7 +45,7 @@ body {
   justify-content: center;
   margin: auto;
 }
-.menu-item {
+.navbar-nav {
   display: flex;
   padding: 0.5rem 0.75rem;
 }
