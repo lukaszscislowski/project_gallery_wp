@@ -18,3 +18,17 @@ with others.
 body {
   background-color: lightgrey;
 }
+
+.container-gallery-temp {
+  width: 60%;
+  height: 100%;
+  background-color: beige;
+  display: flex;
+  margin: 2% auto;
+}
+
+.wrapper {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
