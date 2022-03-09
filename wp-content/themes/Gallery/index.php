@@ -17,11 +17,33 @@ get_header(); ?>
 </header>
 <div class="wrap">
     <main role="container">
+        <section class="section" id="content">
+            <div class="container">
+                <div class="columns is-centered">
+                    <div class="column is-three-quarters">
+                        <?php
+                        if (have_posts()) : ?>
+                            <div class="box">
+                                <?php
+                                $post_icon = apply_filters('iknow_post_icon', 'icon-doc');
+                                // Load posts loop.
+                                while (have_posts()) :
+                                    the_post(); ?>
+                                    <a class="panel-block" href="<?php the_permalink(); ?>">
+                                        <span class="panel-icon"><span class="<?php echo esc_attr($post_icon); ?>"></span></span>
+                                        <?php the_title(); ?>
+                                    </a>
+                                <?php endwhile; ?>
+                            </div>
+
+
+                        <?php endif; ?>
+
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
-    <aside role="complementary">
-
-    </aside>
-
 </div>
 
 <?php get_footer(); ?>
