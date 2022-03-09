@@ -20,15 +20,64 @@ body {
 }
 
 .container-gallery-temp {
-  width: 60%;
+  width: 80%;
   height: 100%;
-  background-color: beige;
+  background-color: transparent;
   display: flex;
   margin: 2% auto;
+  -webkit-box-shadow: 3px 8px 24px -13px rgba(66, 68, 90, 1);
+  -moz-box-shadow: 3px 8px 24px -13px rgba(66, 68, 90, 1);
+  box-shadow: 3px 8px 24px -13px rgba(66, 68, 90, 1);
 }
 
 .wrapper {
   display: grid;
   grid-gap: 20px;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.section_1 {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-areas:
+    "hero hero cta1"
+    "hero hero cta2";
+}
+.cta {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  align-content: center;
+}
+.section_2 {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.section_3 {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+@media (max-width: 700px) {
+  .section_1 {
+    grid-template-areas:
+      "hero hero"
+      "cta1 cta2";
+  }
+  .section_3 {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 500px) {
+  .section_1 {
+    grid-template-areas:
+      "hero"
+      "cta1"
+      "cta2";
+  }
+  .section_3 {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
 }
